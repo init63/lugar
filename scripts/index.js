@@ -3,13 +3,16 @@
 const menuButton = document.querySelector('.header__button');
 const menuList = document.querySelector('.header__list');
 const body = document.querySelector('.page__body');
-menuButton.addEventListener('click', () => {
+
+const setStateMenu = () => {
   let expanded = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', !expanded);
   menuButton.classList.toggle('header__button--open');
   menuList.classList.toggle('header__list--open');
   body.classList.toggle('page__body--lock');
-});
+};
+
+menuButton.addEventListener('click', setStateMenu);
 
 const getId = link => link.getAttribute('href').replace('#', '');
 
@@ -41,6 +44,11 @@ document.querySelectorAll('.js-section').forEach(section => {
 document.querySelector('.navigation__list').addEventListener('click', event => {
   if (event.target.classList.contains('navigation__link')) {
     event.preventDefault();
+
+    if (window.getComputedStyle(menuButton).display === 'block') {
+      setStateMenu();
+    }
+
     scrollToSection(event.target);
   }
 });
