@@ -686,8 +686,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100vh;
 }
 
 .hero__title,
@@ -1401,7 +1400,7 @@ ul {
   }
 }
 
-@media (orientation: landscape) and (max-device-width: 1023px)
+@media (orientation: landscape) and (max-device-width: 1080px)
   and (max-device-height: 767px) {
   .hero__title {
     font-size: 2rem;
