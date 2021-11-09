@@ -1390,7 +1390,7 @@ ul {
   }
 }
 
-@media (orientation: landscape) and (max-device-width: 1091px)
+@media (orientation: landscape) and (max-device-width: 1199px)
   and (max-device-height: 767px) {
   .button {
     padding: 8px 12px;
