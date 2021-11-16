@@ -541,8 +541,7 @@ ul {
 }
 
 .form__input {
-  height: 38px;
-  padding: 0 18px;
+  padding: 8px 16px;
 }
 
 .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
@@ -581,7 +580,7 @@ ul {
           box-sizing: border-box;
   grid-column: span 2;
   height: 108px;
-  padding: 14px 18px;
+  padding: 8px 16px;
   resize: none;
 }
 
@@ -615,7 +614,6 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 107px;
 }
 
 .footer__title {
@@ -685,11 +683,11 @@ ul {
 
 .hero__body {
   position: relative;
-  z-index: 2;
   height: 100vh;
 }
 
 .hero__content {
+  z-index: 2;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -954,24 +952,6 @@ ul {
   fill: var(--blue);
 }
 
-.contact-us__body {
-  padding: 100px 0;
-}
-
-.contact-us__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 32px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.contact-us__picture-box,
 .contact-us__content {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
@@ -991,7 +971,6 @@ ul {
 }
 
 .contact-us__tagline {
-  font-size: 18px;
   color: var(--gray);
 }
 
@@ -1006,14 +985,19 @@ ul {
   display: -ms-flexbox;
   display: flex;
   gap: 18px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .contact-us__guarantee {
   font-size: 12px;
   color: var(--gray);
+}
+
+@media (min-width: 358px) {
+  .contact-us__btn-box {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media (min-width: 670px) {
@@ -1040,6 +1024,27 @@ ul {
 }
 
 @media (min-width: 768px) {
+  .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+  .form__input::-moz-placeholder, .form__textarea::-moz-placeholder {
+    font-size: 18px;
+  }
+  .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .form__input::placeholder,
+  .form__textarea::placeholder {
+    font-size: 18px;
+  }
+
+  .footer__wrapper {
+    margin-bottom: 107px;
+  }
+
   .about__body {
     padding-top: 150px;
     padding-bottom: 150px;
@@ -1109,6 +1114,34 @@ ul {
   }
 
   .comments__content-autor-profession {
+    font-size: 18px;
+  }
+
+  .contact-us__body {
+    padding: 100px 0;
+  }
+
+  .contact-us__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 32px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .contact-us__picture-box,
+  .contact-us__form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
+  .contact-us__tagline {
     font-size: 18px;
   }
 }
@@ -1242,8 +1275,34 @@ ul {
     height: var(--header-size-small);
   }
 
-  .hero__picture {
-    display: none;
+  .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+
+  .form__input::-moz-placeholder, .form__textarea::-moz-placeholder {
+    font-size: 16px;
+  }
+
+  .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .form__input::placeholder,
+  .form__textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 64px;
+    margin-bottom: 64px;
   }
 
   .about__body {
@@ -1315,6 +1374,22 @@ ul {
 
   .comments__content-autor-profession {
     font-size: 14px;
+  }
+
+  .contact-us__body {
+    padding: 32px 0 100px 0;
+  }
+
+  .contact-us__wrapper {
+    display: block;
+  }
+
+  .contact-us__picture-box {
+    display: none;
+  }
+
+  .contact-us__tagline {
+    font-size: 16px;
   }
 }
 
@@ -1399,6 +1474,15 @@ ul {
 @media (max-width: 410px) {
   .hero__title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 357px) {
+  .contact-us__btn-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
