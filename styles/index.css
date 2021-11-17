@@ -681,8 +681,11 @@ ul {
   display: flex;
 }
 
-.hero__body {
+.hero__wrapper {
   position: relative;
+}
+
+.hero__body {
   height: 100vh;
 }
 
